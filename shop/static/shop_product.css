@@ -1,0 +1,29 @@
+.search-tools {
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 1.5em;
+}
+
+.search-form {
+    display: flex;
+    flex: 1;
+}
+
+.searchbar {
+    border: none;
+    background-color: #E4EEFF;
+    padding: 1em 2em;
+    flex: 1;
+    border-radius: 2em;
+}
+
+.filter-button {
+    padding: 0em 2em;
+    background-color: #4285F4;
+    color: white;
+    font-size: smaller;
+    border-radius: 1em;
+}

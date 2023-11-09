@@ -1,0 +1,21 @@
+{% extends 'master.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'add_shop.css' %}">
+{% endblock %}
+
+
+{% block title %} Add Product {% endblock %}
+
+{% block content %}
+
+<div class="content">
+    <form action="{% url 'add-shop' %}" class="add-product-form" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button id="add-button">Add Shop</button>
+    </form>
+</div>
+
+{% endblock %}

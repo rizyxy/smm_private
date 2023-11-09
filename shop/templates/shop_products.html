@@ -1,0 +1,38 @@
+{% extends 'shop_detail.html' %}
+
+{% block extend-css %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'table.css' %}">
+<link rel="stylesheet" href="{% static 'shop_product.css' %}">
+{% endblock %}
+
+{% block section %}
+<div class="search-tools">
+    <form action="" class="search-form">
+        <input type="text" name="" id="" class="searchbar" placeholder="Search">
+    </form>
+    <div class="filter-button">
+        <p>Filter</p>
+    </div>
+</div>
+<table class="products-table">
+    <tr>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Products</th>
+        <th>Sales</th>
+    </tr>
+    <tr>
+        <td>Alibaba Cell</td>
+        <td>Surabaya</td>
+        <td>2</td>
+        <td>200</td>
+    </tr>
+    <tr>
+        <td>Alibaba Cell</td>
+        <td>Surabaya</td>
+        <td>2</td>
+        <td>200</td>
+    </tr>
+</table>
+{% endblock %}

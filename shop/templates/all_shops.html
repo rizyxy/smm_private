@@ -1,0 +1,44 @@
+{% extends 'master.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'all_shops.css' %}">
+<link rel="stylesheet" href="{% static 'table.css' %}">
+{% endblock %}
+
+
+{% block title %} All Products {% endblock %}
+
+{% block content %}
+
+<div class="content">
+    <div class="content-header">
+        <form action="" class="search-form">
+            <input class="search-bar" type="text" placeholder="Search">
+        </form>
+        <button class="header-button">Filter</button>
+        <a class="link-button" href="{% url 'add-shop' %}">Add Shop</a>
+    </div>
+    <table class="products-table">
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Products</th>
+            <th>Sales</th>
+        </tr>
+        <tr>
+            <td>Alibaba Cell</td>
+            <td>Surabaya</td>
+            <td>2</td>
+            <td>200</td>
+        </tr>
+        <tr>
+            <td>Alibaba Cell</td>
+            <td>Surabaya</td>
+            <td>2</td>
+            <td>200</td>
+        </tr>
+    </table>
+</div>
+
+{% endblock %}

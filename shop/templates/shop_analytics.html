@@ -1,0 +1,56 @@
+{% extends 'shop_detail.html' %}
+
+{% block extend-css %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'shop_analytics.css' %}">
+{% endblock %}
+
+{% block section %}
+
+<div class="cards">
+    <div class="card">
+        <p class="card-title">1024</p>
+        <p class="card-subtitle">Products</p>
+    </div>
+    <div class="card">
+        <p class="card-title">1024</p>
+        <p class="card-subtitle">Products</p>
+    </div>
+    <div class="card">
+        <p class="card-title">1024</p>
+        <p class="card-subtitle">Products</p>
+    </div>
+    <div class="card">
+        <p class="card-title">1024</p>
+        <p class="card-subtitle">Products</p>
+    </div>
+</div>
+<p>Sales Graph</p>
+<div class="graph">
+    <canvas id="myChart"></canvas>
+</div>
+<a href="">View Leaderboards</a>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+<script>
+    const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+                label: '# of Votes',
+                data: [12, 19, 3, 5, 30, 3],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+{% endblock %}
