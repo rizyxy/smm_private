@@ -11,28 +11,64 @@
     <form action="" class="search-form">
         <input type="text" name="" id="" class="searchbar" placeholder="Search">
     </form>
-    <div class="filter-button">
+    <div class="filter-button" id="filter-button">
         <p>Filter</p>
     </div>
 </div>
 <table class="products-table">
     <tr>
         <th>Name</th>
-        <th>Location</th>
-        <th>Products</th>
+        <th>Price</th>
         <th>Sales</th>
     </tr>
     <tr>
-        <td>Alibaba Cell</td>
-        <td>Surabaya</td>
-        <td>2</td>
+        <td>Samsung S22 Ultra</td>
+        <td>Rp 20.000.000</td>
         <td>200</td>
     </tr>
     <tr>
-        <td>Alibaba Cell</td>
-        <td>Surabaya</td>
-        <td>2</td>
+        <td>Samsung Galaxy Watch</td>
+        <td>Rp 6.000.000</td>
         <td>200</td>
     </tr>
 </table>
+
+<div class="filter-modal" id="filter-modal">
+    <div class="filter-content">
+        <form action="" class="filter-form">
+            <select name="categories" id="categories">
+                <option value="all" selected>All Categories</option>
+                <option value="gadget">Gadget</option>
+                <option value="otomotif">Otomotif</option>
+            </select>
+            <div class="param-range">
+                <input type="number" name="minprice" id="minprice" placeholder="Min. Price">
+                <input type="number" name="maxprice" id="maxprice" placeholder="Max. Price">
+            </div>
+            <div class="param-range">
+                <input type="number" name="minsales" id="minsales" placeholder="Min. Sales">
+                <input type="number" name="maxsales" id="maxsales" placeholder="Max. Sales">
+            </div>
+            <button type="submit" class="apply-button">Apply Filter</button>
+        </form>
+    </div>
+</div>
+
+<script>
+
+    filter_button = document.getElementById('filter-button');
+
+    filter_modal = document.getElementById('filter-modal');
+
+    filter_button.onclick = function() {
+        filter_modal.style.display = "block";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == filter_modal) {
+            filter_modal.style.display = "none";
+        }
+    }
+
+</script>
 {% endblock %}
