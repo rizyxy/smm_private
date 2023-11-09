@@ -18,10 +18,10 @@
 
     <div class="grid">
         <div class="sidenav">
-            <a id="{% if request.path == '/' %}active{% endif %}" href="/">Home</a>
+            <a id="{% if request.resolver_match.url_name == 'dashboard' %}active{% endif %}" href="{% url 'dashboard' %}">Home</a>
             <a id="{% if request.path == '/events/' %}active{% endif %}" href="">Events</a>
             <a id="{% if request.path == '/products/' %}active{% endif %}" href="">Products</a>
-            <a id="{% if request.path == '/shops/' %}active{% endif %}" href="" >Shops</a>
+            <a id="{% if 'shops' in request.path %}active{% endif %}" href="{% url 'all-shops' %}" >Shops</a>
             <a id="{% if request.path == '/graphs/' %}active{% endif %}" href="">Graphs</a>
         </div>
         <!-- Add Content Here -->

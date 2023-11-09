@@ -20,8 +20,8 @@ Shop Details
     <p class="content-subtitle"><strong>Surabaya</strong></p>
     <hr>
     <div class="section-selectors">
-        <a href="" id="section-active" class="section-selector">Analytics</a>
-        <a href="" class="section-selector">Products</a>
+        <a href="{% url 'shop-analytics' %}" id="{% if request.resolver_match.url_name == 'shop-analytics' %}section-active{% endif %}" class="section-selector">Analytics</a>
+        <a href="{% url 'shop-products' %}" id="{% if request.resolver_match.url_name == 'shop-products' %}section-active{% endif %}" class="section-selector">Products</a>
     </div>
     {% block section %}
     {% endblock %}
